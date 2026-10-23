@@ -1,0 +1,14 @@
+.quality-image-wrapper {
+  width: 100%;
+  max-height: 50vh;
+  margin: 20px 0;
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: auto;
+}
+.quality-process-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: top right;
+}

@@ -1,0 +1,68 @@
+.pg-section {
+  /* --green: #08752a; */
+  
+  width: 100%;
+  padding: 60px clamp(18px, 5vw, 75px);
+  background: #fff;
+  color: var(--dark-green);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.pg-section * {
+  box-sizing: border-box;
+}
+
+
+/* About section */
+.pg-about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(30px, 5vw, 70px);
+  max-width: 1250px;
+  margin: 0 auto;
+  /* border: 2px solid; */
+}
+
+/* Animations */
+@keyframes pg-enter {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive for About */
+@media (max-width: 900px) {
+  .pg-about {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .pg-factory,
+  .pg-about-text {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .pg-section {
+    padding: 38px 15px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .pg-section *,
+  .pg-section *::before,
+  .pg-section *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

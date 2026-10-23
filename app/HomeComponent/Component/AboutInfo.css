@@ -1,0 +1,98 @@
+.pg-label {
+  --green: #08752a;
+
+  display: inline-block;
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 14px;
+}
+
+.pg-about-text {
+  animation: pg-enter 0.8s 0.25s ease both;
+}
+
+.pg-about-text h2 {
+  --dark-green: #064b20;
+
+  color: var(--dark-green);
+  font-size: clamp(27px, 3vw, 39px);
+  line-height: 1.2;
+  letter-spacing: -1px;
+  font-weight: 800;
+  margin: 0 0 20px;
+}
+
+.pg-description {
+  --text: #5d6961;
+
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.95;
+  margin: 0;
+}
+
+
+/* About button */
+.pg-button {
+--green: #08752a;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  padding: 14px 22px;
+  border-radius: 9px;
+  background: var(--green);
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pg-button span {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.pg-button:hover {
+  --dark-green: #064b20;
+  
+  background: var(--dark-green);
+  transform: translateY(-3px);
+  box-shadow: 0 9px 20px #08752a30;
+}
+
+.pg-button:hover span {
+  transform: translateX(5px);
+}
+
+@media (max-width: 900px) {
+  /* .pg-factory, */
+  .pg-about-text {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  
+  .pg-about-text h2 {
+    font-size: 29px;
+  }
+  .pg-description {
+    font-size: 14px;
+  }
+  .pg-features {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+  .pg-year {
+    left: 14px;
+    bottom: 14px;
+    padding: 10px 13px;
+  }
+}

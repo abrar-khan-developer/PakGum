@@ -1,0 +1,30 @@
+.top-hero-section {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+    margin-top: 20px;
+}
+
+.text-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.description {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #4a5568;
+    margin: 0;
+}
+
+.description strong {
+    color: #006622; 
+}
+
+@media screen and (max-width: 800px) {
+    .top-hero-section {
+        grid-template-columns:  1fr; 
+    }
+}

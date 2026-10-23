@@ -1,0 +1,58 @@
+/* Company highlights */
+.pg-features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+  margin: 27px 0 30px;
+}
+.pg-feature {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+}
+
+.pg-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #eaf6eb;
+  border: 1px solid #cce8d0;
+  color: var(--green);
+  font-size: 21px;
+  transition: transform 0.3s ease;
+}
+
+.pg-feature:hover .pg-icon {
+  transform: scale(1.12) rotate(-8deg);
+}
+
+.pg-feature div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.pg-feature strong {
+  font-size: 12px;
+  color: var(--dark-green);
+}
+
+.pg-feature small {
+  color: var(--text);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+
+@media (max-width: 480px) {
+  
+  .pg-features {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+  
+}

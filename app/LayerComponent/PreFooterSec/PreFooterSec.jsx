@@ -37,6 +37,7 @@ export default function Certifications() {
   return (
     <main className="pg-section">
       <section className="pg-certifications-container">
+
         <div className="pg-cert-grid">
           {certifications.map((cert) => (
             <Card
@@ -47,6 +48,7 @@ export default function Certifications() {
             />
           ))}
         </div>
+        
       </section>
     </main>
   );

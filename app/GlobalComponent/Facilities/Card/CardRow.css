@@ -1,0 +1,21 @@
+.handling-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .handling-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+     /* place-items: center; */
+     /* border: 2px solid; */
+  }
+}
+
+@media (min-width: 768px) {
+  .handling-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+   
+  }
+}

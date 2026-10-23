@@ -1,0 +1,19 @@
+.scada-banner{
+    width: 90%;
+    /* border: 2px solid green; */
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media screen and  (max-width:1004px) {
+    .scada-banner{
+        width: 100%;
+    }
+}
+@media screen and (max-width:600px) {
+.scada-banner{
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+}
