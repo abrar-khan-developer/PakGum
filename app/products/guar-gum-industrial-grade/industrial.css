@@ -1,0 +1,13 @@
+.industrial-container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+
+@media screen and (max-width:900px) {
+    .industrial-container{
+      grid-template-columns: 1fr;
+    }
+}

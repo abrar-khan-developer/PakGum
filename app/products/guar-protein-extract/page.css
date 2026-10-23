@@ -1,0 +1,14 @@
+.farms-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    grid-gap: 10px;
+    /* border: 21px solid; */
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .farms-container{
+        grid-template-columns: 1fr;
+    }
+}
