@@ -46,7 +46,7 @@
 
       const nextIndex =
         (currentIndexRef.current + moveDirection + slides.length) %
-        slides.length;
+        slides.length; 
 
       setDirection(moveDirection);
       setIncomingIndex(nextIndex);
@@ -59,6 +59,7 @@
         setIsAnimating(false);
         isAnimatingRef.current = false;
       }, 800);
+      
     }, []);
 
     useEffect(() => {
@@ -69,6 +70,7 @@
       }, 5000);
 
       return () => clearInterval(timer);
+
     }, [isPaused, changeSlide]);
 
     useEffect(() => {
@@ -152,6 +154,7 @@
               <p>{slides[currentIndex].description}</p>
 
               <span className="pg-hero-accent" />
+
             </div>
 
             {/* Previous button */}
@@ -178,6 +181,7 @@
 
             {/* Bottom navigation */}
             <div className="pg-hero-bottom">
+              
               <div className="pg-hero-counter" aria-live="polite">
                 <span className="pg-counter-current">
                   {String(currentIndex + 1).padStart(2, "0")}
@@ -205,6 +209,7 @@
                   />
                 ))}
               </div>
+
             </div>
 
           </div>

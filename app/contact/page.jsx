@@ -1,7 +1,30 @@
-"use client"
 import './contact.css'
 
+import Form from './component/Form';
+import ContactCard from './component/ContactCard';
+
 export default function ContactUs() {
+
+    const pakistanOffice = {
+      title: "Pakistan Office",
+      details: [
+        { label: "Address", value: "B/30, Estate Avenue, S.I.T.E., Karachi-75700, Pakistan" },
+        { label: "Phone", value: "+92-21-37130671-4, +92-21-32574311-2, 32570172-3" },
+        { label: "Fax", value: "+92-21-32561325, 32561315" },
+      ],
+      email: "inquiries@pakgum.com"
+    };
+
+    const chinaOffice = {
+      title: "China Office",
+      details: [
+        { label: "Address", value: "Room 1208, Ordos Tower, 777 Taolin Road, Pudong New Area, Shanghai P.R. China" },
+        { label: "Zip Code", value: "200135" },
+        { label: "Cellphone", value: "+86-1360-175-1886" },
+      ],
+      email: "china@pakgum.com"
+    };
+    
   return (
     <div className="contact-section">
       {/* Section Heading */}
@@ -14,43 +37,19 @@ export default function ContactUs() {
       {/* Main Grid Container */}
       <div className="contact-grid">
         
-        {/* Pakistan Office */}
-        <div className="contact-card">
-          <h3>Pakistan Office</h3>
-          <p><strong>Address:</strong> B/30, Estate Avenue, S.I.T.E., Karachi-75700, Pakistan</p>
-          <p><strong>Phone:</strong> +92-21-37130671-4, +92-21-32574311-2, 32570172-3</p>
-          <p><strong>Fax:</strong> +92-21-32561325, 32561315</p>
-          <p><strong>Email:</strong> <a href="mailto:inquiries@pakgum.com">inquiries@pakgum.com</a></p>
-        </div>
+        <ContactCard 
+          title = {pakistanOffice.title}
+          details={pakistanOffice.details}
+          email={pakistanOffice.email}
+        />
 
-        {/* China Office */}
-        <div className="contact-card">
-          <h3>China Office</h3>
-          <p><strong>Address:</strong> Room 1208, Ordos Tower, 777 Taolin Road, Pudong New Area, Shanghai P.R. China</p>
-          <p><strong>Zip Code:</strong> 200135</p>
-          <p><strong>Cellphone:</strong> +86-1360-175-1886</p>
-          <p><strong>Email:</strong> <a href="mailto:china@pakgum.com">china@pakgum.com</a></p>
-        </div>
+        <ContactCard 
+          title = {chinaOffice.title}
+          details={chinaOffice.details}
+          email={chinaOffice.email}
+        />
 
-        {/* Inquiry Form Box */}
-        <div className="contact-card">
-          <h3>Send Us a Message</h3>
-          <form onSubmit={(e) => e.preventDefault()}>
-            <div className="form-group">
-              <label>Your Name</label>
-              <input type="text" placeholder="Full Name" required />
-            </div>
-            <div className="form-group">
-              <label>Email Address</label>
-              <input type="email" placeholder="name@company.com" required />
-            </div>
-            <div className="form-group">
-              <label>Message</label>
-              <textarea rows="3" placeholder="Write your message here..." required></textarea>
-            </div>
-            <button type="submit" className="submit-btn">Submit Inquiry</button>
-          </form>
-        </div>
+        <Form />
 
       </div>
       
