@@ -37,7 +37,6 @@ export default function About() {
   return (
     <main className="pg-main-about"> 
 
-        {/* <AboutInfo /> */}
           <AboutInfo
              description={description}
              features={features}
@@ -46,7 +45,7 @@ export default function About() {
         <MainImg
           image={our_values}
           width="70%"
-          height="95vh"
+          height="50vh"
         />
         
     </main>

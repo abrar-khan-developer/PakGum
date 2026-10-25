@@ -1,4 +1,4 @@
-
+import './Card.css'
 export default function Card({ image, title, description }) {
   return (
     <div className="pg-cert-card">

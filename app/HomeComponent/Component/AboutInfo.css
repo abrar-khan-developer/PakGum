@@ -1,6 +1,4 @@
 .pg-label {
-  --green: #08752a;
-
   display: inline-block;
   color: var(--green);
   font-size: 12px;
@@ -11,6 +9,7 @@
 
 .pg-about-text {
   animation: pg-enter 0.8s 0.25s ease both;
+  padding-inline: 6px;
 }
 
 .pg-about-text h2 {

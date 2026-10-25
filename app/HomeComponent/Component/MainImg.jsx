@@ -6,7 +6,7 @@ export default function FactoryImage({
   image,
   // direction = "horizontal",
   width = "45%",
-  height = "380px",
+  height = "100px",
   showBadge = true,
 }) {
   return (
@@ -18,8 +18,8 @@ export default function FactoryImage({
         src={image}
         alt="Pakistan Gum Industries factory"
         fill
-        // sizes="(max-width: 768px) 100vw, 50vw"
-        style={{ objectFit: "cover" }}
+        className="pg-factory-img"
+        // style={{ objectFit: "cover" }}
       />
 
       {showBadge && (

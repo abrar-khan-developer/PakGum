@@ -3,6 +3,7 @@
     max-width: 1200px;
     margin: auto;
     display: flex;
+    padding-inline: 6px;
     flex-direction: column;
     align-items: start;
     justify-content: center;

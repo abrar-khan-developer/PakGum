@@ -5,6 +5,7 @@ import AboutInfo from '../Component/AboutInfo'
 
 // image importing
 import Image from '@/app/Images/Contact.jpg' 
+import Link from "next/link";
 
 export default function Contact() {
   return (
@@ -16,7 +17,7 @@ export default function Contact() {
               image={Image}
               showBadge = {false}
               width="100%"
-              height="80%"
+              height="50vh"
           />
 
         {/* Right Side: Contact Text & Details */}
@@ -60,9 +61,11 @@ export default function Contact() {
 
           </div>
 
-          <a href="mailto:inquiries@pakgum.com" className="pg-button">
+          <Link 
+            href="/contact"
+            className="pg-button">
             Send an Email <span>→</span>
-          </a>
+          </Link>
         </div>
 
 

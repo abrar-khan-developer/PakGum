@@ -1,0 +1,159 @@
+/* Certification Card */
+.pg-cert-card {
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  padding: 5px;
+  background: #fff;
+  border: 2px solid #08752a30;
+  border-radius: 16px;
+  max-width: 250px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.pg-cert-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--green, #08752a);
+  box-shadow: 0 10px 25px #08752a15;
+  cursor: pointer;
+}
+
+/* Image Container */
+.pg-cert-img-box {
+  width: 100%;
+  height: 180px;
+  flex: 0 0 180px;
+  min-width: 0;
+  padding: 10px;
+
+  display: grid;
+  place-items: center;
+
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.pg-cert-img-box img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  min-width: 0;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Card Text */
+.pg-cert-info {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.pg-cert-info strong {
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--dark-green, #064b20);
+  font-weight: 700;
+}
+
+.pg-cert-info small {
+  color: var(--text, #5d6961);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .pg-cert-card {
+    gap: 12px;
+  }
+
+  .pg-cert-img-box {
+    height: 150px;
+    flex-basis: 150px;
+    padding: 8px;
+  }
+
+  .pg-cert-info strong {
+    font-size: 13px;
+  }
+
+  .pg-cert-info small {
+    font-size: 11px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .pg-cert-card {
+    padding: 5px;
+    gap: 10px;
+    border-radius: 12px;
+  }
+
+  .pg-cert-card:hover {
+    transform: translateY(-2px);
+  }
+
+  .pg-cert-img-box {
+    height: 120px;
+    flex-basis: 120px;
+    padding: 5px;
+    border-radius: 8px;
+  }
+
+  .pg-cert-info {
+    gap: 4px;
+  }
+
+  .pg-cert-info strong {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .pg-cert-info small {
+    font-size: 10px;
+    line-height: 1.45;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 380px) {
+  .pg-cert-img-box {
+    height: 100px;
+    flex-basis: 100px;
+  }
+
+  .pg-cert-info strong {
+    font-size: 11px;
+  }
+
+  .pg-cert-info small {
+    font-size: 10px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .pg-cert-card,
+  .pg-cert-card:hover {
+    animation: none;
+    transition: none;
+    transform: none;
+  }
+}
