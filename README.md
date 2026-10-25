@@ -19,6 +19,7 @@ A modern, responsive company website for Pakistan Gum Industries (Pvt.) Ltd., sh
 - JavaScript
 - CSS
 - Lucide React
+- EmailJs
 
 ## Getting Started
 
