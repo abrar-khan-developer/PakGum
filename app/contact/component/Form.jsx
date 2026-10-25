@@ -14,9 +14,10 @@ function Form() {
     setStatusMsg("");
 
     // EmailJs Credentials
-    const SERVICE_ID = "service_7gbyf3r";   // Service Id In Email Service Option
-    const TEMPLATE_ID = "template_qoavnjj";  // Template Id In Email Template Option
-    const PUBLIC_KEY = "UwOP14PVVZ8LxLMOR";    // Publick Key In Account Option
+    const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;   // Service Id In Email Service Option
+    const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE;  // Template Id In Email Template Option
+    const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;    // Publick Key In Account Option 
+    console.log(SERVICE_ID,TEMPLATE_ID,PUBLIC_KEY)
 
     // EmailJs Library Settup Code
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
